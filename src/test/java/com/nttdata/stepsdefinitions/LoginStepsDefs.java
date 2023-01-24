@@ -1,6 +1,6 @@
 package com.nttdata.stepsdefinitions;
 
-import com.epam.healenium.SelfHealingDriver;
+//import com.epam.healenium.SelfHealingDriver;
 import com.nttdata.pagesobjects.LoginPage;
 import com.nttdata.steps.LoginSteps;
 import io.cucumber.java.Before;
@@ -19,15 +19,15 @@ public class LoginStepsDefs {
     @Steps
     LoginSteps loginSteps;
 
-    private SelfHealingDriver driver;
-    private WebDriver delegate;
+   // private SelfHealingDriver driver;
+   // private WebDriver delegate;
 
 
-    @Before(order=0)
-    public void setUp(){
-        delegate = Serenity.getDriver();
-        driver = SelfHealingDriver.create(delegate);
-    }
+//    @Before(order=0)
+//    public void setUp(){
+//        delegate = Serenity.getDriver();
+//        driver = SelfHealingDriver.create(delegate);
+//    }
 
     @Given("^que el Cliente se encuentra en la página SauceDemo$")
     public void queElClienteSeEncuentraEnLaPáginaSauceDemo() {
@@ -36,8 +36,8 @@ public class LoginStepsDefs {
 
     @When("inicia sesión con las credenciales: {string}, {string}")
     public void iniciaSesiónConLasCredenciales(String user, String password) throws InterruptedException {
-        Thread.sleep(25000);
-        loginSteps.login(user, password, driver);
+     //   Thread.sleep(25000);
+       loginSteps.login(user, password);
     }
 
     @Then("el login es satisfactorio")

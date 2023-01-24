@@ -27,7 +27,7 @@ public class LoginPage extends PageObject {
         element(userNameInput).waitUntilVisible();
     }
 
-    public void enterUser(String user, WebDriver driver){
+    public void enterUser(String user){
         userNameInput.sendKeys(user);
        //driver.findElement(By.id("user-name")).sendKeys(user);
     }

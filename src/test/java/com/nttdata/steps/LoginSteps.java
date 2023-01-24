@@ -16,8 +16,8 @@ public class LoginSteps {
     InventoryPage inventoryPage;
 
     @Step("User login")
-    public void login(String user, String password, WebDriver driver){
-        loginPage.enterUser(user, driver);
+    public void login(String user, String password){
+        loginPage.enterUser(user);
         loginPage.enterPassword(password);
         loginPage.clickLoginButton();
     }
